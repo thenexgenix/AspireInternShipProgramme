@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router";
-import Button from "../Button";
 
 const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -103,14 +102,17 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
               </Link>
             )}
 
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={isLoggedIn ? onLogout : onLogin}
               className="ml-4 px-4 py-2 rounded-md bg-purple-800 text-white hover:bg-purple-700"
             >
+              
+            </motion.button> */}
+            <button className="btn bg-button text-white   ">
               {isLoggedIn ? "Log Out" : "Log In"}
-            </motion.button>
+            </button>
           </div>
 
           <div className="md:hidden">
