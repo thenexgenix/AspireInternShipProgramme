@@ -4,7 +4,7 @@ import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router";
 import Button from "../Button";
 
-const Navbar = ({ isLoggedIn = true, onLogin, onLogout }) => {
+const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -38,7 +38,7 @@ const Navbar = ({ isLoggedIn = true, onLogin, onLogout }) => {
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`fixed w-full top-0 z-50 transition-all duration-300 border-2 border-black ${
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         isScrolled ? "backdrop-blur-md bg-primary/80" : "bg-transparent"
       }`}
     >
@@ -46,7 +46,7 @@ const Navbar = ({ isLoggedIn = true, onLogin, onLogout }) => {
         <div className="flex items-center justify-between h-16">
           <motion.div whileHover={{ scale: 1.05 }}>
             <Link to="/" className="text-2xl font-bold text-purple-800">
-              AspireIntern  
+              AspireIntern
             </Link>
           </motion.div>
 
@@ -68,7 +68,7 @@ const Navbar = ({ isLoggedIn = true, onLogin, onLogout }) => {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
-                          className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                          className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white "
                         >
                           {item.submenu.map((subItem) => (
                             <Link
@@ -95,7 +95,10 @@ const Navbar = ({ isLoggedIn = true, onLogin, onLogout }) => {
             ))}
 
             {isLoggedIn && (
-              <Link to="/dashboard" className="px-3 py-2 text-gray-700 hover:text-purple-800">
+              <Link
+                to="/dashboard"
+                className="px-3 py-2 text-gray-700 hover:text-purple-800"
+              >
                 My Dashboard
               </Link>
             )}
@@ -111,7 +114,10 @@ const Navbar = ({ isLoggedIn = true, onLogin, onLogout }) => {
           </div>
 
           <div className="md:hidden">
-            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-700">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-gray-700"
+            >
               {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
           </div>
@@ -133,18 +139,33 @@ const Navbar = ({ isLoggedIn = true, onLogin, onLogout }) => {
                     <div>
                       <button
                         onClick={() =>
-                          setActiveDropdown(activeDropdown === item.title ? null : item.title)
+                          setActiveDropdown(
+                            activeDropdown === item.title ? null : item.title
+                          )
                         }
                         className="w-full flex items-center justify-between px-3 py-2 text-gray-700"
                       >
                         <span>{item.title}</span>
-                        <FiChevronDown className={`transform transition-transform ${activeDropdown === item.title ? "rotate-180" : ""}`} />
+                        <FiChevronDown
+                          className={`transform transition-transform ${
+                            activeDropdown === item.title ? "rotate-180" : ""
+                          }`}
+                        />
                       </button>
                       <AnimatePresence>
                         {activeDropdown === item.title && (
-                          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="pl-4">
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="pl-4"
+                          >
                             {item.submenu.map((subItem) => (
-                              <Link key={subItem.title} to={subItem.href} className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-800">
+                              <Link
+                                key={subItem.title}
+                                to={subItem.href}
+                                className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-800"
+                              >
                                 {subItem.title}
                               </Link>
                             ))}
@@ -153,7 +174,10 @@ const Navbar = ({ isLoggedIn = true, onLogin, onLogout }) => {
                       </AnimatePresence>
                     </div>
                   ) : (
-                    <Link to={item.href} className="block px-3 py-2 text-gray-700 hover:text-purple-800">
+                    <Link
+                      to={item.href}
+                      className="block px-3 py-2 text-gray-700 hover:text-purple-800"
+                    >
                       {item.title}
                     </Link>
                   )}
@@ -161,7 +185,10 @@ const Navbar = ({ isLoggedIn = true, onLogin, onLogout }) => {
               ))}
 
               {isLoggedIn && (
-                <Link to="/dashboard" className="block px-3 py-2 text-gray-700 hover:text-purple-800">
+                <Link
+                  to="/dashboard"
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-800"
+                >
                   My Dashboard
                 </Link>
               )}
