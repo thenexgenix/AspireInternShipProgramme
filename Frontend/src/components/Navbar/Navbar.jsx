@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router";
+import logo from "../../Assets/images/Aspire_Logo_Nexgenix.png";
 
 const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,9 +23,9 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
       title: "Our Program",
       href: "#",
       submenu: [
-        { title: "Courses", href: "/courses" },
-        { title: "Workshops", href: "/workshops" },
-        { title: "Events", href: "/events" },
+        { title: "Courses", href: "/our-program/courses" },
+        { title: "Workshops", href: "/our-program/workshops" },
+        { title: "Events", href: "/our-program/events" },
       ],
     },
     { title: "Collaborators", href: "/collaborators" },
@@ -37,15 +38,19 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "backdrop-blur-md bg-primary/80" : "bg-transparent"
+      className={`fixed w-full top-0 z-50 transition-all duration-300  py-3 ${
+        isScrolled ? "backdrop-blur-md bg-primary-color/80" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div whileHover={{ scale: 1.05 }}>
-            <Link to="/" className="text-2xl font-bold text-purple-800">
-              AspireIntern
+            <Link to="/">
+              <img
+                src={logo}
+                alt="Aspire Internship Programme (Thenexgenix)"
+                className=" w-40 md:w-44 "
+              />
             </Link>
           </motion.div>
 
@@ -57,7 +62,7 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
                     onMouseEnter={() => setActiveDropdown(item.title)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <button className="flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-purple-800 group">
+                    <button className="flex items-center space-x-1 px-3 py-2 text-text hover:text-purple-900 group">
                       <span>{item.title}</span>
                       <FiChevronDown className="group-hover:rotate-180 transition-all duration-300 ease-linear" />
                     </button>
@@ -73,7 +78,7 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
                             <Link
                               key={subItem.title}
                               to={subItem.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50"
+                              className="block px-4 py-2 text-sm text-text hover:bg-purple-50"
                             >
                               {subItem.title}
                             </Link>
@@ -85,7 +90,7 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
                 ) : (
                   <Link
                     to={item.href}
-                    className="px-3 py-2 text-gray-700 hover:text-purple-800"
+                    className="px-3 py-2 text-black hover:text-purple-900"
                   >
                     {item.title}
                   </Link>
@@ -96,7 +101,7 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
             {isLoggedIn && (
               <Link
                 to="/dashboard"
-                className="px-3 py-2 text-gray-700 hover:text-purple-800"
+                className="px-3 py-2 text-black hover:text-purple-900"
               >
                 My Dashboard
               </Link>
@@ -110,7 +115,7 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
             >
               
             </motion.button> */}
-            <button className="btn bg-button text-white   ">
+            <button className="btn bg-bg-secondary text-primary-color rounded-md  ">
               {isLoggedIn ? "Log Out" : "Log In"}
             </button>
           </div>
@@ -118,9 +123,17 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700"
+              className="text-text    text-xl"
             >
-              {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {
+                isMobileMenuOpen ? (
+                  // <FiX size={24} />
+                  <span> Close</span>
+                ) : (
+                  <span> Menu</span>
+                )
+                //  <FiMenu size={24} />
+              }
             </button>
           </div>
         </div>
@@ -132,7 +145,7 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white"
+            className="md:hidden bg-primary-color"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
@@ -166,7 +179,7 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
                               <Link
                                 key={subItem.title}
                                 to={subItem.href}
-                                className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-800"
+                                className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-900"
                               >
                                 {subItem.title}
                               </Link>
@@ -178,7 +191,7 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
                   ) : (
                     <Link
                       to={item.href}
-                      className="block px-3 py-2 text-gray-700 hover:text-purple-800"
+                      className="block px-3 py-2 text-gray-700 hover:text-purple-900"
                     >
                       {item.title}
                     </Link>
@@ -189,11 +202,14 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
               {isLoggedIn && (
                 <Link
                   to="/dashboard"
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-800"
+                  className="block px-3 py-2 text-gray-700 hover:text-purple-900"
                 >
                   My Dashboard
                 </Link>
               )}
+              <button className="btn bg-bg-secondary text-white rounded-md  ">
+                {isLoggedIn ? "Log Out" : "Log In"}
+              </button>
             </div>
           </motion.div>
         )}
