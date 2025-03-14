@@ -1,0 +1,28 @@
+{
+    "title": "Transform Your Career Journey",
+    "description": "Join our comprehensive internship program designed to give you real-world experience and accelerate your professional growth",
+    "features": [
+      {
+        "icon": "PiCalendarBlank",
+        "title": "3-Month Duration",
+        "description": "Intensive learning and hands-on experience"
+      },
+      {
+        "icon": "PiUsersThree",
+        "title": "Multiple Roles",
+        "description": "Intensive learning and hands-on experience"
+      },
+      {
+        "icon": "PiStar",
+        "title": "Expert Mentorship",
+        "description": "Learn from industry professionals"
+      },
+      {
+        "icon": "PiCertificate",
+        "title": "Certification",
+        "description": "Industry-recognized credentials"
+      }
+    ],
+    "imageUrl": "https://i.postimg.cc/BZjMLRKz/career-image.jpg"
+  }
+  

@@ -1,0 +1,31 @@
+{
+    "title": "Why choose Aspire?",
+    "description": "We offer a unique combination of practical experience and career development opportunities. Hands-on Learning and Work on real projects using the latest technologies and tools in the industry.",
+    "features": [
+      {
+        "title": "Hands-on Learning",
+        "description": "Work on real projects using the latest technologies and tools in the industry.",
+        "icon": "PiLaptopThin",
+        "iconLibrary": "react-icons/pi"
+      },
+      {
+        "title": "Career Acceleration",
+        "description": "Fast-track your career growth with industry certification and portfolio building.",
+        "icon": "PiRocketThin",
+        "iconLibrary": "react-icons/pi"
+      },
+      {
+        "title": "Expert Mentorship",
+        "description": "Get guidance from experienced professionals who are leaders in their field.",
+        "icon": "PiUserCheckThin",
+        "iconLibrary": "react-icons/pi"
+      },
+      {
+        "title": "Networking",
+        "description": "Get connected with industry professionals and build valuable relationships.",
+        "icon": "PiGitBranchThin",
+        "iconLibrary": "react-icons/pi"
+      }
+    ]
+  }
+  
