@@ -5,7 +5,7 @@ import Footer from "./../components/Footer/Footer";
 
 const Root = () => {
   return (
-    <main>
+    <main className="font-Poopins">
       {/* navbar */}
       <Navbar />
       {/* outlet */}

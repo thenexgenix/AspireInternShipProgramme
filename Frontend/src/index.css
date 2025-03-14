@@ -1,13 +1,26 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
-    themes: light --default;
-  }
+  themes: light --default;
+}
+
+@font-face {
+  font-family: "Poopins";
+  src: url('../src/Assets/Font/Poppins-Medium.ttf')format('truetype');
+}
 
 @theme {
-    --color-primary-color: #FFFFFF;
-    --color-button: #330B51;
-    --color-secondary: #FFB4C5;
-    --color-text: #000000;
-    --color-text-secondary: #330B51;
-    --color-text-accent: #FFB4C5;
+  --font-Poopins: 'Poopins', 'sans-serif';
+  --color-primary-color: #EFF2FA;
+  --color-bg-secondary: #330B51;
+  --color-bg-accent: #FFB4C5;
+  --color-text: #000000;
+  --color-text-secondary: #330B51;
+  --color-text-accent: #FFB4C5;
+}
+
+html {
+  background-color: #EFF2FA;
+  scroll-behavior: smooth;
+
 }
