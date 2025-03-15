@@ -4,7 +4,7 @@ import AboutUs from '../AboutUs/AboutUs';
 const Home = () => {
     return (
         <div>
-           <AboutUs></AboutUs>
+           
         </div>
     );
 };

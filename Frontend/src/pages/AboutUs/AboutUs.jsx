@@ -6,6 +6,7 @@ import Mission from "./Misson/Misson";
 import Workflow from "./Workflow/Workflow";
 import workflowbg from "../../Assets/AboutUspage/workflow.png";
 import Member from "./member/Member";
+import Testimonial from "./Testimonial/Testimonial";
 
 const AboutUs = () => {
   return (
@@ -19,6 +20,7 @@ const AboutUs = () => {
       </div>
       <Workflow ></Workflow>
       <Member></Member>
+      <Testimonial></Testimonial>
     </div>
   );
 };
