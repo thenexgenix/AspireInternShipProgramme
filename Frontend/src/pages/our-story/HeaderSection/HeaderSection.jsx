@@ -1,5 +1,3 @@
-
-
 function HeaderSection() {
   return (
     <div
@@ -13,10 +11,10 @@ function HeaderSection() {
         Our Story
       </h1>
       <p className="text-lg sm:text-xl md:text-2xl mt-3">
-      Inspiring journeys of growth, achievement, and career transformation.
+        Inspiring journeys of growth, achievement, and career transformation.
       </p>
     </div>
-  )
+  );
 }
 
-export default HeaderSection
+export default HeaderSection;

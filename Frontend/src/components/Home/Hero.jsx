@@ -12,9 +12,9 @@ import {
 import SuccessStoriesSection from "./SuccessStoriesSection";
 
 const Hero = () => {
-  // Track vertical scroll position
+  //  vertical scroll position
   const { scrollY } = useScroll();
-  const rotate = useTransform(scrollY, [0, 900], [0, 360]); // Rotate effect on scroll
+  const rotate = useTransform(scrollY, [0, 900], [0, 360]); 
 
   // Motion value for animating the number
   const count = useMotionValue(1);
@@ -30,7 +30,7 @@ const Hero = () => {
       {/* Rotating line SVG (Top Right) */}
       <motion.svg
         style={{ rotate: rotate }}
-        className="absolute top-0 right-0 w-64 h-64 text-gray-100 opacity-40"
+        className="absolute z-50 top-0 right-0 w-64 h-64 text-gray-200 opacity-40"
         viewBox="0 0 200 200"
       >
         <path
