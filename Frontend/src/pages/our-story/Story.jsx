@@ -12,10 +12,8 @@ const Story = () => {
       <div className="max-w-7xl mx-auto">
         {/* video section */}
         <VideoSection />
-
         {/* ambition section */}
         <Ambition />
-
         {/* story card section */}
         <AllStory />
       </div>
