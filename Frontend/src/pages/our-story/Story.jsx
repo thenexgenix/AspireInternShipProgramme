@@ -2,6 +2,7 @@ import React from "react";
 import HeaderSection from "./HeaderSection/HeaderSection";
 import Ambition from "./Ambition/Ambition";
 import AllStory from "./AllStory/AllStory";
+import VideoSection from "./VideoSection/VideoSection";
 
 const Story = () => {
   return (
@@ -10,6 +11,7 @@ const Story = () => {
       <HeaderSection />
       <div className="max-w-7xl mx-auto">
         {/* video section */}
+        <VideoSection />
 
         {/* ambition section */}
         <Ambition />
