@@ -1,9 +1,11 @@
 import React from 'react';
+import HeaderSection from './HeaderSection/HeaderSection';
 
 const Story = () => {
     return (
-        <div className='bg-primary mt-16'>
-            
+        <div className='bg-primary-color mt-24 mx-auto overflow-hidden'>
+            {/* header section */}
+            <HeaderSection />
         </div>
     );
 };
