@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"; // Importing necessary hooks
-import backgroundFrame from "../../../Assets/Stories/Frame.png";
+import backgroundFrame from "../../../Assets/Stories/person-bg.png";
 import personImage from "../../../Assets/Stories/person.png";
 import ambitionBG from "../../../Assets/Stories/ambition-bg.png"
 import { GoArrowUpRight } from "react-icons/go";
@@ -16,9 +16,9 @@ function Ambition() {
       >
         Transforming Ambitions into Success: Journeys of Aspiring Leaders
       </motion.h1>
-      <div className="flex flex-col md:flex-row gap-6 justify-between my-8">
+      <div className="flex flex-col lg:flex-row gap-6 justify-between my-8">
         {/* left side card */}
-        <div className="w-full lg:w-[650px] h-full md:h-[435px] rounded-3xl relative"
+        <div className="w-full md:w-[650px] h-full md:h-[435px] rounded-3xl relative"
         style={{
             backgroundImage: `url(${ambitionBG})`,
             backgroundRepeat: "no-repeat",
@@ -35,7 +35,7 @@ function Ambition() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="card w-full sm:w-[350px]"
+            className="card w-full md:w-[350px]"
           >
             {/* image of the card */}
             <div className="w-full h-full">
