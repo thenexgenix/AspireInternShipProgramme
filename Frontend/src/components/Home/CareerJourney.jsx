@@ -59,7 +59,7 @@ const CareerJourney = memo(({ CareerJourneydata }) => {
 
         {/* Image */}
         <motion.div
-          className="flex-1"
+          className="flex-1 relative"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -67,9 +67,10 @@ const CareerJourney = memo(({ CareerJourneydata }) => {
         >
           <img
             src={CareerJourneydata.imageUrl}
-            alt="Career Journey Aspire internship programm"
-            className="rounded-lg shadow-lg aspect-square object-cover md:h-[400px] lg:h-[500px]"
+            alt="Career Journey Aspire internship program"
+            className="rounded-lg shadow-lg aspect-square object-cover md:h-[400px] lg:h-[500px] relative z-40"
           />
+          <div className="absolute inset-0 w-[300px] md:w-[400px] lg:w-[500px] h-full translate-x-12 translate-y-5 rounded-lg border-4 border-[#ebc3cc]  before:absolute before:inset-0 before:w-full before:h-full before:rounded-lg before:bg-gradient-to-r before:from-[#5F1D91] before:to-[#FFB4C5] before:opacity-20 before:-z-10"></div>
         </motion.div>
       </div>
     </section>
