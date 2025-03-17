@@ -20,7 +20,7 @@ const Home = () => {
       <CourseGraduates />
       <Testimonials />
     </section>
-  );
+  );  
 };
 
 export default Home;

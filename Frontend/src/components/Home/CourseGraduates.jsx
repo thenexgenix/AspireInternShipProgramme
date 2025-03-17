@@ -54,7 +54,7 @@ const CourseGraduates = () => {
             </div>
 
             {/*  Name cards  */}
-            <div className="mt-4 text-md  -translate-y-16 translate-x-20 font-bold tracking-wide text-black bg-white px-4 py-2 rounded-md shadow-md">
+            <div className="mt-4 text-[70%]  -translate-y-16 translate-x-20 font-bold tracking-wide text-black bg-white px-4 py-2 rounded-md shadow-md">
               <motion.h3
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -63,7 +63,7 @@ const CourseGraduates = () => {
               >
                 {profile.name}
               </motion.h3>
-              <span className="text-sm text-green-600 mt-2">
+              <span className="text-[90%]  text-green-600 mt-2">
                 {profile.role}
               </span>
             </div>
