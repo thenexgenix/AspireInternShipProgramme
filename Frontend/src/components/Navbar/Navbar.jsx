@@ -115,9 +115,11 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
             >
               
             </motion.button> */}
-            <button className="btn bg-bg-secondary text-primary-color rounded-md  ">
-              {isLoggedIn ? "Log Out" : "Log In"}
-            </button>
+            <Link to={"/login"}>
+              <button className="btn bg-bg-secondary text-primary-color rounded-md  ">
+                {isLoggedIn ? "Log Out" : "Log In"}
+              </button>
+            </Link>
           </div>
 
           <div className="md:hidden">
@@ -207,9 +209,11 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
                   My Dashboard
                 </Link>
               )}
-              <button className="btn bg-bg-secondary text-white rounded-md  ">
-                {isLoggedIn ? "Log Out" : "Log In"}
-              </button>
+              <Link to={"/login"}>
+                <button className="btn bg-bg-secondary text-primary-color rounded-md  ">
+                  {isLoggedIn ? "Log Out" : "Log In"}
+                </button>
+              </Link>
             </div>
           </motion.div>
         )}
