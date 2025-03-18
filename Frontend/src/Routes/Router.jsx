@@ -5,6 +5,9 @@ import Home from "./../pages/Home/Home";
 import Courses from "../pages/Program/Courses";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Story from "../pages/our-story/Story";
+import Login from "../pages/Authencation/Login";
+import Register from "../pages/Authencation/Register";
+import Collaborators from "../pages/collab/Collaborators";
 
 const Router = () => {
   return (
@@ -17,8 +20,13 @@ const Router = () => {
           <Route path="our-program">
             <Route path="courses" element={<Courses />} />
           </Route>
-          {/* out stories */}
+          {/* our-Collaborators  routes*/}
+          <Route path="collaborators" element={<Collaborators />} />
+          {/* out stories  routes*/}
           <Route path="stories" element={<Story />} />
+          {/* Authencation */}
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Register />} />
         </Route>
       </Routes>
     </BrowserRouter>
