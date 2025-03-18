@@ -1,19 +1,16 @@
 import { motion } from "motion/react";
+import { memo } from "react";
 
-const LogoCard = ({ bank }) => {
+const LogoCard = memo(({ bank }) => {
   return (
     <motion.div
-      className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+      className="bg-primary-color p-6 rounded-sm shadow-lg hover:shadow-2xl transition-shadow w-full h-full"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      whileHover={{ scale: 1.01 }}
       whileTap={{ scale: 0.95 }}
       transition={{ duration: 0.2 }}
     >
-      <div
-        className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full"
-
-      >
+      <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
         <img
           src={bank.logo}
           alt={`${bank.name} logo`}
@@ -30,6 +27,6 @@ const LogoCard = ({ bank }) => {
       </motion.h3>
     </motion.div>
   );
-};
+});
 
 export default LogoCard;

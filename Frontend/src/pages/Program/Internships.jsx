@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router";
 
-const Courses = () => {
+const Internships = () => {
   const location = useLocation();
   const path = location.pathname.split("/").filter(Boolean);
   return (
@@ -11,14 +11,18 @@ const Courses = () => {
         <div className="breadcrumbs text-sm">
           <ul>
             {path?.map((e, i) => {
-              return <li className="cursor-pointer" key={i}>{e}</li>;
+              return (
+                <li className="cursor-pointer" key={i}>
+                  {e}
+                </li>
+              );
             })}
           </ul>
         </div>
-        buy me a cofee courses
+        buy me a cofee Internship
       </section>
     </>
   );
 };
 
-export default Courses;
+export default Internships;
