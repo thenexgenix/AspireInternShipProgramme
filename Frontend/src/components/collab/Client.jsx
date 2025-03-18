@@ -23,8 +23,8 @@ const Client = () => {
   }
 
   return (
-    <div className="min-h-screen bg-primary-color py-12 px-4 sm:px-6 lg:px-8">
-      <motion.div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2">
+    <div className=" bg-[#eef0f7a9] py-12 px-4 sm:px-6 lg:px-8">
+      <motion.div className="mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1">
         {collabIcons.map((icon, index) => (
           <motion.div
             key={icon.id}

@@ -129,8 +129,8 @@ const SuccessStoriesSection = ({ rounded }) => {
                 y2="207.912"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#330B51" />
-                <stop offset="1" stop-color="#F7CFD8" />
+                <stop stopColor="#330B51" />
+                <stop offset="1" stopColor="#F7CFD8" />
               </linearGradient>
             </defs>
           </svg>

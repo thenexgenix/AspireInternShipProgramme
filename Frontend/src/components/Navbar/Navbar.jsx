@@ -1,10 +1,28 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router";
 import logo from "../../Assets/images/Aspire_Logo_Nexgenix.png";
 
-const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
+const navItems = [
+  { title: "About", href: "/about" },
+  {
+    title: "Our Program",
+    href: "#",
+    submenu: [
+      { title: "Internship", href: "/our-program/internship" },
+      { title: "Courses", href: "/our-program/courses" },
+      { title: "Events", href: "/our-program/events" },
+    ],
+  },
+  { title: "Collaborators", href: "/collaborators" },
+  { title: "Blog", href: "/blog" },
+  { title: "Stories", href: "/stories" },
+  { title: "Contact", href: "/contact" },
+];
+
+
+const Navbar = memo(({ isLoggedIn , onLogin, onLogout }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -17,22 +35,7 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { title: "About", href: "/about" },
-    {
-      title: "Our Program",
-      href: "#",
-      submenu: [
-        { title: "Courses", href: "/our-program/courses" },
-        { title: "Workshops", href: "/our-program/workshops" },
-        { title: "Events", href: "/our-program/events" },
-      ],
-    },
-    { title: "Collaborators", href: "/collaborators" },
-    { title: "Blog", href: "/blog" },
-    { title: "Stories", href: "/stories" },
-    { title: "Contact", href: "/contact" },
-  ];
+ 
 
   return (
     <motion.nav
@@ -220,6 +223,6 @@ const Navbar = ({ isLoggedIn, onLogin, onLogout }) => {
       </AnimatePresence>
     </motion.nav>
   );
-};
+});
 
 export default Navbar;
