@@ -8,6 +8,8 @@ import Story from "../pages/our-story/Story";
 import Login from "../pages/Authencation/Login";
 import Register from "../pages/Authencation/Register";
 import Collaborators from "../pages/collab/Collaborators";
+import Internships from "../pages/Program/Internships";
+import Events from "../pages/Program/Events";
 
 const Router = () => {
   return (
@@ -18,7 +20,9 @@ const Router = () => {
           <Route path="about" element={<AboutUs />} />
           {/* our-programm  routes*/}
           <Route path="our-program">
+            <Route path="internship" element={<Internships />} />
             <Route path="courses" element={<Courses />} />
+            <Route path="events" element={<Events />} />
           </Route>
           {/* our-Collaborators  routes*/}
           <Route path="collaborators" element={<Collaborators />} />
