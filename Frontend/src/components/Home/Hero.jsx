@@ -79,7 +79,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link to="/apply">
+                <Link to="/our-program/internship">
                   <button className="px-8 py-4 bg-bg-secondary text-white rounded-lg font-medium transition-colors">
                     Apply now
                   </button>
