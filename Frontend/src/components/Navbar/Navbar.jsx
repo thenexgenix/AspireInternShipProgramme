@@ -21,8 +21,7 @@ const navItems = [
   { title: "Contact", href: "/contact" },
 ];
 
-
-const Navbar = memo(({ isLoggedIn , onLogin, onLogout }) => {
+const Navbar = memo(({ isLoggedIn, onLogin, onLogout }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -34,8 +33,6 @@ const Navbar = memo(({ isLoggedIn , onLogin, onLogout }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
- 
 
   return (
     <motion.nav
@@ -133,9 +130,9 @@ const Navbar = memo(({ isLoggedIn , onLogin, onLogout }) => {
               {
                 isMobileMenuOpen ? (
                   // <FiX size={24} />
-                  <span> Close</span>
+                  <span className="underline"> Close</span>
                 ) : (
-                  <span> Menu</span>
+                  <span className="underline"> Menu</span>
                 )
                 //  <FiMenu size={24} />
               }
@@ -150,7 +147,7 @@ const Navbar = memo(({ isLoggedIn , onLogin, onLogout }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-primary-color"
+            className="md:hidden bg-primary-color mt-3"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
