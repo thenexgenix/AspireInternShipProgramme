@@ -5,7 +5,7 @@ const Register = () => {
   return (
     <>
       <section className="bg-primary-color mt-24 pt-8 px-4  mx-auto flex flex-row items-center md:items-start justify-center lg:justify-between mb-10">
-        <div className="flex flex-col  justify-center items-center border lg:translate-x-9 xl:translate-x-60 ">
+        <div className="flex flex-col  justify-center items-center  lg:translate-x-9 xl:translate-x-60 ">
           {/* logo */}
           <div></div>
           {/* Title */}
