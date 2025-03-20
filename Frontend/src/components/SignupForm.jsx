@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
 
-function SignupForm() {
+const  SignupForm = () => {
   return (
     <div className=" flex items-center justify-center">
       <div className="w-full">
@@ -134,7 +134,7 @@ function SignupForm() {
             >
               Log in
             </Link>
-          </p>  
+          </p>
         </div>
       </div>
     </div>
