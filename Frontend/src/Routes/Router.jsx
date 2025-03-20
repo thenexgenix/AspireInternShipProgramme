@@ -10,6 +10,7 @@ import Register from "../pages/Authencation/Register";
 import Collaborators from "../pages/collab/Collaborators";
 import Internships from "../pages/Program/Internships";
 import Events from "../pages/Program/Events";
+import Blogs from "../pages/blogs/Blogs";
 
 const Router = () => {
   return (
@@ -26,6 +27,9 @@ const Router = () => {
           </Route>
           {/* our-Collaborators  routes*/}
           <Route path="collaborators" element={<Collaborators />} />
+          {/* blogs section routes */}
+
+          <Route path="blog" element={<Blogs />} />
           {/* out stories  routes*/}
           <Route path="stories" element={<Story />} />
           {/* Authencation */}
