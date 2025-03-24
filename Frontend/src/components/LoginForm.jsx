@@ -11,7 +11,7 @@ const LoginForm = () => {
             {/* Social Sign-in Buttons */}
             <div className="mt-6 space-y-5">
               {/* Google */}
-              <button className="btn w-full rounded-md bg-white text-black border-[#e5e5e5]">
+              <button className="btn w-full font-medium rounded-md bg-white text-black border-[#e5e5e5]">
                 <svg
                   aria-label="Google logo"
                   width="16"
@@ -43,7 +43,7 @@ const LoginForm = () => {
               </button>
 
               {/* Apple */}
-              <button className="btn w-full rounded-md bg-black text-white border-black">
+              <button className="btn w-full font-medium rounded-md bg-black text-white border-black">
                 <svg
                   aria-label="Apple logo"
                   width="16"

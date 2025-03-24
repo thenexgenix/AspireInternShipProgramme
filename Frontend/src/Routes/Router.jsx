@@ -28,7 +28,6 @@ const Router = () => {
           {/* our-Collaborators  routes*/}
           <Route path="collaborators" element={<Collaborators />} />
           {/* blogs section routes */}
-
           <Route path="blog" element={<Blogs />} />
           {/* out stories  routes*/}
           <Route path="stories" element={<Story />} />
