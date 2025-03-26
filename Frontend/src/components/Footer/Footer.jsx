@@ -1,46 +1,50 @@
 import React from "react";
 import { FaTwitter, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
-import highTechPark from "../../Assets/logos/bhtpa-bangladesh-hi-tech-park-authority-144365.jpg";
-import ictDiviton from "../../Assets/logos/ict-division.png";
 import cuet from "../../Assets/logos/Cuet_incubatior.webp";
 import Pda from "../../Assets/logos/PDA Logo.png";
+import aspireLogo from "../../Assets/logos/aspire-edu.png";
+import ictdivision from "../../Assets/logos/images-of_itbi.webp";
 
 const Footer = () => {
   return (
-    <footer className="bg-bg-secondary text-white py-8 px-4 md:px-12">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-[#5F1D91] text-white py-8 px-4 md:px-12">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 ">
         {/* Left Section */}
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Aspire Education Foundation</h2>
-          <p>Founded By</p>
-          <div className="bg-white text-black py-2 px-4 w-44 inline-block rounded-3xl">
-            <img src={Pda} alt="PDA (Pathway for Democratic Alternatives)" />
-          </div>
-          <p>Supported By</p>
-          <div className="flex space-x-4 flex-col">
-            <div className="flex  gap-9">
-              <img
-                src={highTechPark}
-                alt="Bangladesh High Tech Park "
-                className="h-30 object-scale-down"
-              />
-              <img
-                src={ictDiviton}
-                alt="Ict Division Bangladesh"
-                className="h-30  object-scale-down "
-              />
-            </div>
+        <div className="space-y-4  ">
+          <div className=" flex flex-col justify-center items-center">
             <div>
+              <img src={aspireLogo} alt="Aspire Internship Programme" />
+            </div>
+            <h2 className="text-xl font-semibold">
+              Aspire Education Foundation
+            </h2>
+          </div>
+          <div className=" bg-white text-black flex flex-col gap-2 font-bold px-16 py-12  md:-translate-x-2 lg:translate-x-5 xl:-translate-x-52 rounded-4xl">
+            <p>Founded By</p>
+            <div className=" text-black py-2 px-4 w-44 inline-block rounded-3xl">
               <img
-                src={cuet}
-                alt="IT Business Incubatior,Cuet"
-                className="h-30  object-scale-down "
+                src={Pda}
+                alt="PDA (Pathway for Domestic Alternatives)"
+                className="h-20"
               />
             </div>
-          </div>
-          <div className=" text-white text-sm py-2 px-4 rounded-md">
-            Aspire Professional Development Initiative Founded by PDA (Pathway
-            for Democratic Alternatives) Aspire Education Foundation
+            <p>Supported By</p>
+            <div className="flex space-x-4 flex-col">
+              <div className="flex  gap-9">
+                <img
+                  src={ictdivision}
+                  alt="Bangladesh High Tech Park "
+                  className="h-14 object-scale-down"
+                />{" "}
+              </div>
+              <div>
+                <img
+                  src={cuet}
+                  alt="IT Business Incubatior,Cuet"
+                  className="h-14 mt-4"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -97,6 +101,10 @@ const Footer = () => {
             <FaLinkedin className="text-xl cursor-pointer hover:text-gray-300" />
             <FaFacebook className="text-xl cursor-pointer hover:text-gray-300" />
             <FaInstagram className="text-xl cursor-pointer hover:text-gray-300" />
+          </div>
+          <div className=" text-white text-sm py-2 px-4 rounded-md">
+            Aspire Professional Development Initiative Founded by PDA (Pathway
+            for Domestic Alternatives) Aspire Education Foundation
           </div>
         </div>
       </div>

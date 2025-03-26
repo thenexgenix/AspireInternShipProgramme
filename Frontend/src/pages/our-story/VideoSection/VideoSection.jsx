@@ -28,13 +28,13 @@ function VideoSection() {
 
   useEffect(() => {
     controls.start({
-      borderColor: ["#8A2BE2", "#FF1493", "#00BFFF", "#8A2BE2"],
-      boxShadow: [
-        "0px 0px 15px #8A2BE2",
-        "0px 0px 20px #FF1493",
-        "0px 0px 15px #00BFFF",
-        "0px 0px 15px #8A2BE2",
-      ],
+      // borderColor: ["#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF"],
+      // boxShadow: [
+      //   "0px 0px 15px #8A2BE2",
+      //   "0px 0px 20px #FF1493",
+      //   "0px 0px 15px #00BFFF",
+      //   "0px 0px 15px #8A2BE2",
+      // ],
       // scale: [1, 1.05, 1],
       transition: {
         duration: videoDuration,
