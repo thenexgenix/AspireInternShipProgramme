@@ -62,7 +62,7 @@ const Workflow = () => {
                 className="w-full lg:w-72 p-10 rounded-md backdrop-blur-[20.01px] bg-gradient-to-b from-[rgba(255,180,197,0.07)] via-[rgba(153,153,153,0.07)] to-[rgba(153,153,153,0.07)] shadow-md text-center"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{once: true}}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
                 <h1 className="text-lg font-semibold">{item.title}</h1>

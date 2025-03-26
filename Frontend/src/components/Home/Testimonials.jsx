@@ -118,7 +118,7 @@ const Testimonials = () => {
         </div>
 
         {/* Start  Journey section*/}
-        <div className="bg-bg-accent w-full py-16 px-4 sm:px-6 lg:px-8 border-2 border-black  ">
+        <div className="bg-bg-accent w-full py-16 px-4 sm:px-6 lg:px-8   ">
           <div className="max-w-7xl mx-auto text-center flex flex-col justify-center items-center gap-3.5 ">
             <motion.h3
               initial={{ opacity: 0, y: 20 }}

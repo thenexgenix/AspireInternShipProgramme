@@ -32,8 +32,8 @@ const Router = () => {
           {/* out stories  routes*/}
           <Route path="stories" element={<Story />} />
           {/* Authencation */}
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<Register />} />
+          {/* <Route path="login" element={<Login />} /> */}
+          {/* <Route path="signup" element={<Register />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>

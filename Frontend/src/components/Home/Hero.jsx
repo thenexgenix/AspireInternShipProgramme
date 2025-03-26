@@ -10,6 +10,23 @@ import {
   animate,
 } from "motion/react";
 import SuccessStoriesSection from "./SuccessStoriesSection";
+import Afsana from "../../Assets/images/picture/Afsana Tasnim Labonno.png";
+import Pinki from "../../Assets/images/picture/Pinki Dey.png";
+import Riaz from "../../Assets/images/picture/Riaz Uddin Ahmed.png";
+import Sanchari from "../../Assets/images/picture/Sanchari Karmakar.png";
+import Supta from "../../Assets/images/picture/Supta Baul.png";
+import Tonmoy from "../../Assets/images/picture/Tonmoy Mitra.png";
+import Urmi from "../../Assets/images/picture/Urmi Karmakar.png";
+
+const tooltip = [
+  { image: Afsana, id: 1 },
+  { image: Pinki, id: 2 },
+  { image: Riaz, id: 3 },
+  { image: Sanchari, id: 4 },
+  { image: Supta, id: 5 },
+  { image: Tonmoy, id: 6 },
+  { image: Urmi, id: 7 },
+];
 
 const Hero = () => {
   //  vertical scroll position
@@ -46,7 +63,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto px-4 md:py-20 "
+        className="container mx-auto px-4 md:pt-20 "
       >
         <div className="flex flex-col md:flex-row items-center gap-28 md:gap-20   ">
           {/* Left Section */}
@@ -123,9 +140,9 @@ const Hero = () => {
                   className=" relative rounded-2xl overflow-hidden shadow-2xl z-1 "
                 >
                   <img
-                    src="https://i.postimg.cc/6ppK7f9p/Hero-Image.jpg"
+                    src="https://i.postimg.cc/JhVrBb6P/Navy-And-Yellow-Modern-Congratulation-Best-Employee-Of-The-Month-Instagram-Post.png"
                     alt="Aspire Internship Program"
-                    className="w-full h-auto "
+                    className="w-full"
                   />
                 </motion.div>
 
@@ -134,16 +151,16 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="absolute -top-20 left-2 md:-top-14 md:-left-14 bg-bg-secondary text-white px-6 py-3 rounded-lg shadow-lg z-10"
+                  className="absolute -top-25 left-2 h-fit md:top-2/4 md:-left-20 bg-bg-secondary text-white px-6 py-3 rounded-lg shadow-lg z-10"
                 >
                   <div className="font-semibold flex flex-col gap-3">
-                    <p>1000+ Students Enrolled</p>
+                    <p>500+ Intern Recruit</p>
                     <div className="avatar-group -space-x-6">
-                      {[...Array(5)].map((_, index) => (
-                        <div className="avatar" key={index}>
+                      {tooltip?.map((item, index) => (
+                        <div className="avatar" key={item.id}>
                           <div className="w-12 z-0">
                             <img
-                              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                              src={item.image}
                               alt={`Student ${
                                 index + 1
                               } Aspire Internship Program `}
@@ -161,27 +178,13 @@ const Hero = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
-                  className=" z-10 mb-3 absolute -right-4 bottom-1/3 bg-bg-secondary p-3  md:p-6 rounded-lg shadow-lg flex gap-3 justify-center items-center "
+                  className=" z-10 mb-3 absolute -right-4 bottom-0 bg-bg-secondary p-3  md:p-6 rounded-lg shadow-lg flex gap-3 justify-center items-center "
                 >
                   <div className="bg-bg-accent p-1 md:p-3 rounded-xl ">
                     <FaGoogleScholar />
                   </div>
                   <p className="font-medium text-primary-color">
                     Internship Opportunity
-                  </p>
-                </motion.div>
-                {/* svg-img-2 */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0, scaleX: 1.04 }}
-                  transition={{ duration: 0.8, delay: 1 }}
-                  className="z-10 mb-3 absolute -right-4 bottom-1/12 bg-bg-secondary p-3  md:p-6 rounded-lg shadow-lg flex gap-3 justify-center items-center"
-                >
-                  <div className="bg-bg-accent p-1 md:p-3 rounded-xl ">
-                    <FaCompass />
-                  </div>
-                  <p className="font-medium text-primary-color">
-                    Explore new Courses
                   </p>
                 </motion.div>
               </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 import { Link } from "react-router";
 import logo from "../../Assets/images/Aspire_Logo_Nexgenix.png";
 
@@ -18,10 +18,10 @@ const navItems = [
   { title: "Collaborators", href: "/collaborators" },
   { title: "Blog", href: "/blog" },
   { title: "Stories", href: "/stories" },
-  { title: "Contact", href: "/contact" },
+  // { title: "Contact", href: "/contact" },
 ];
 
-const Navbar = memo(({ isLoggedIn, onLogin, onLogout }) => {
+const Navbar = memo(({ isLoggedIn }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -34,22 +34,27 @@ const Navbar = memo(({ isLoggedIn, onLogin, onLogout }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
   return (
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`fixed w-full top-0 z-50 transition-all duration-300  py-3 ${
+      className={`fixed w-full top-0 z-50 transition-all duration-300 py-5 ${
         isScrolled ? "backdrop-blur-md bg-primary-color/80" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <motion.div whileHover={{ scale: 1.05 }}>
-            <Link to="/">
+          <motion.div initial={{ scale: 0.8 }} whileHover={{ scale: 0.9 }}>
+            <Link to="/" onClick={closeMobileMenu}>
               <img
                 src={logo}
                 alt="Aspire Internship Programme (Thenexgenix)"
-                className=" w-40 md:w-44 "
+                className="w-40 md:w-44"
               />
             </Link>
           </motion.div>
@@ -72,7 +77,7 @@ const Navbar = memo(({ isLoggedIn, onLogin, onLogout }) => {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
-                          className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white "
+                          className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white"
                         >
                           {item.submenu.map((subItem) => (
                             <Link
@@ -107,17 +112,9 @@ const Navbar = memo(({ isLoggedIn, onLogin, onLogout }) => {
               </Link>
             )}
 
-            {/* <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={isLoggedIn ? onLogout : onLogin}
-              className="ml-4 px-4 py-2 rounded-md bg-purple-800 text-white hover:bg-purple-700"
-            >
-              
-            </motion.button> */}
-            <Link to={"/login"}>
-              <button className="btn bg-bg-secondary text-primary-color rounded-md  ">
-                {isLoggedIn ? "Log Out" : "Log In"}
+            <Link to="/our-program/internship">
+              <button className="btn bg-bg-secondary text-primary-color rounded-md">
+                Apply Now
               </button>
             </Link>
           </div>
@@ -125,17 +122,13 @@ const Navbar = memo(({ isLoggedIn, onLogin, onLogout }) => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-text    text-xl"
+              className="text-text text-xl"
             >
-              {
-                isMobileMenuOpen ? (
-                  // <FiX size={24} />
-                  <span className="underline"> Close</span>
-                ) : (
-                  <span className="underline"> Menu</span>
-                )
-                //  <FiMenu size={24} />
-              }
+              {isMobileMenuOpen ? (
+                <span className="underline">Close</span>
+              ) : (
+                <span className="underline">Menu</span>
+              )}
             </button>
           </div>
         </div>
@@ -182,6 +175,7 @@ const Navbar = memo(({ isLoggedIn, onLogin, onLogout }) => {
                                 key={subItem.title}
                                 to={subItem.href}
                                 className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-900"
+                                onClick={closeMobileMenu}
                               >
                                 {subItem.title}
                               </Link>
@@ -194,6 +188,7 @@ const Navbar = memo(({ isLoggedIn, onLogin, onLogout }) => {
                     <Link
                       to={item.href}
                       className="block px-3 py-2 text-gray-700 hover:text-purple-900"
+                      onClick={closeMobileMenu}
                     >
                       {item.title}
                     </Link>
@@ -205,13 +200,15 @@ const Navbar = memo(({ isLoggedIn, onLogin, onLogout }) => {
                 <Link
                   to="/dashboard"
                   className="block px-3 py-2 text-gray-700 hover:text-purple-900"
+                  onClick={closeMobileMenu}
                 >
                   My Dashboard
                 </Link>
               )}
-              <Link to={"/login"}>
-                <button className="btn bg-bg-secondary text-primary-color rounded-md  ">
-                  {isLoggedIn ? "Log Out" : "Log In"}
+
+              <Link to="/our-program/internship" onClick={closeMobileMenu}>
+                <button className="btn bg-bg-secondary text-primary-color rounded-md">
+                  Apply Now
                 </button>
               </Link>
             </div>
