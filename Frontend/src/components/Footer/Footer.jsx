@@ -1,124 +1,153 @@
 import React from "react";
-import { FaTwitter, FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
-import cuet from "../../Assets/logos/Cuet_incubatior.webp";
-import Pda from "../../Assets/logos/PDA Logo.png";
-import aspireLogo from "../../Assets/logos/aspire-edu.png";
-import ictdivision from "../../Assets/logos/images-of_itbi.webp";
+import pda from "../../Assets/logos/PDA Logo.png";
+import itbi from "../../Assets/logos/Cuet_incubatior.webp";
+import ictDivision from "../../Assets/logos/ict-division.png";
+import bhtpa from "../../Assets/logos/bhtpa-bangladesh-hi-tech-park-authority-144365.jpg";
+import asp from "../../Assets/logos/aspire-edu.png";
+import { Link } from "react-router";
+import { FaFacebookSquare, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaSquareInstagram, FaSquareTwitter } from "react-icons/fa6";
+import { ImMail } from "react-icons/im";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#5F1D91] text-white py-8 px-4 md:px-12">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 ">
-        {/* Left Section */}
-        <div className="space-y-4  ">
-          <div className=" flex flex-col justify-center items-center">
-            <div>
-              <img src={aspireLogo} alt="Aspire Internship Programme" />
+    <footer className="bg-[#5F1D91] text-white">
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Left Column - Logo and Info */}
+          <div className="space-y-4 ">
+            <div className="flex flex-col justify-start items-start ">
+              <img src={asp} alt="Aspire Internship Program" />
+              <h3 className="text-xl font-semibold">
+                Aspire Education Foundation{" "}
+              </h3>
             </div>
-            <h2 className="text-xl font-semibold">
-              Aspire Education Foundation
-            </h2>
-          </div>
-          <div className=" bg-white text-black flex flex-col gap-2 font-bold px-16 py-12  md:-translate-x-2 lg:translate-x-5 xl:-translate-x-52 rounded-4xl">
-            <p>Founded By</p>
-            <div className=" text-black py-2 px-4 w-44 inline-block rounded-3xl">
-              <img
-                src={Pda}
-                alt="PDA (Pathway for Domestic Alternatives)"
-                className="h-20"
-              />
-            </div>
-            <p>Supported By</p>
-            <div className="flex space-x-4 flex-col">
-              <div className="flex  gap-9">
+            <div className="space-y-2">
+              <p className="text-sm">Founded By</p>
+              <div className="bg-white rounded-lg p-1.5 w-32">
+                {/* pda  logo */}
                 <img
-                  src={ictdivision}
-                  alt="Bangladesh High Tech Park "
-                  className="h-14 object-scale-down"
-                />{" "}
-              </div>
-              <div>
-                <img
-                  src={cuet}
-                  alt="IT Business Incubatior,Cuet"
-                  className="h-14 mt-4"
+                  src={pda}
+                  alt="Founder Logo"
+                  className="w-full h-full object-contain"
                 />
               </div>
+              <p className="text-sm mt-4">Supported By</p>
+              <div className="flex gap-2">
+                {/*  Supported logos */}
+                <div className="bg-white rounded p-2 w-40 h-16">
+                  <img
+                    src={itbi}
+                    alt="IT Business Incubatior, CUET"
+                    className="w-full h-full"
+                  />
+                </div>
+                <div className="bg-white rounded p-2 w-40 h-16">
+                  <img
+                    src={ictDivision}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="bg-white rounded p-2 w-40 h-16">
+                  <img
+                    src={bhtpa}
+                    alt="Bangladesh High Tech Park"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <p className="text-sm mt-4">
+                Aspire Professional Development Initiative Founded by
+                <br />
+                PDA (Pathway for Domestic Alternatives)
+                <br />
+                Aspire Education Foundation
+              </p>
+            </div>
+          </div>
+
+          {/* Middle Column - Quick Links */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="about" className="hover:underline">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="our-program/internship" className="hover:underline">
+                  internship
+                </Link>
+              </li>
+              <li>
+                <Link to="collaborators" className="hover:underline">
+                  collaborators
+                </Link>
+              </li>
+              <li>
+                <Link to="stories" className="hover:underline">
+                  stories
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Right Column - Newsletter */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold">Newsletter</h3>
+            <p className="text-sm">
+              Subscribe to our Newsletter to get You weekly Dose of News,Updates
+              and Tips
+            </p>
+            <div className="space-y-2 ">
+              <div className="flex items-center bg-white rounded-lg p-2">
+                <ImMail className="text-purple-900 w-5 h-5 mr-2" />
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="bg-transparent text-purple-800 outline-none flex-1"
+                />
+              </div>
+              <button className="w-full bg-white text-purple-800 py-2 px-4 rounded-lg font-semibold hover:bg-purple-100 transition-colors">
+                Subscribe
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Middle Section */}
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2">
-            <li>
-              <a href="#" className="hover:underline">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Stories
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Contact
-              </a>
-            </li>
-          </ul>
+        {/* Social Media Icons */}
+        <div className="flex justify-end gap-4 mt-8 text-2xl">
+          <a href="#" className="text-white hover:text-purple-200">
+            <FaSquareTwitter />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/aspire-internship-program/"
+            className="text-white hover:text-purple-200"
+            target="_blank"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://www.facebook.com/aspireinternhsipprogram.pda"
+            className="text-white hover:text-purple-200"
+            target="_blank"
+          >
+            <FaFacebookSquare />
+          </a>
+          <a href="" className="text-white hover:text-purple-200">
+            <FaSquareInstagram />
+          </a>
         </div>
 
-        {/* Right Section */}
-        <div className="flex flex-col justify-start items-start gap-5">
-          <div>
-            <h3 className="text-lg md:text-2xl  font-semibold mb-4">
-              Newsletter
-            </h3>
-            <p className="text-sm mb-2">
-              Subscribe to our Newsletter to get your weekly dose of news,
-              updates, and tips
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="p-2 rounded-md text-black w-full md:w-auto bg-white"
-            />
-            <button className="bg-[#c65bd4] px-4 py-2 rounded-md hover:bg-pink-600">
-              Subscribe
-            </button>
-          </div>
-          <div className="flex space-x-4 mt-4">
-            <FaTwitter className="text-xl cursor-pointer hover:text-gray-300" />
-            <FaLinkedin className="text-xl cursor-pointer hover:text-gray-300" />
-            <FaFacebook className="text-xl cursor-pointer hover:text-gray-300" />
-            <FaInstagram className="text-xl cursor-pointer hover:text-gray-300" />
-          </div>
-          <div className=" text-white text-sm py-2 px-4 rounded-md">
-            Aspire Professional Development Initiative Founded by PDA (Pathway
-            for Domestic Alternatives) Aspire Education Foundation
-          </div>
+        {/* Copyright */}
+        <div className="text-center text-sm mt-8 pt-8 border-t border-purple-700">
+          <p>
+            © 2025 Aspire. All rights reserved. Privacy Policy | Terms of
+            Service
+          </p>
         </div>
-      </div>
-
-      {/* Bottom Section */}
-      <div className="text-center text-sm mt-8 border-t border-white pt-4">
-        &copy; 2025 Aspire. All rights reserved.{" "}
-        <a href="#" className="hover:underline">
-          Privacy Policy
-        </a>{" "}
-        |{" "}
-        <a href="#" className="hover:underline">
-          Terms of Service
-        </a>
       </div>
     </footer>
   );
