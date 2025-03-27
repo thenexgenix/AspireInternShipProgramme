@@ -31,7 +31,7 @@ const workflowData = [
 
 const Workflow = () => {
   return (
-    <div className="mx-0.5 lg:mx-10 my-20">
+    <div className="mx-0.5  lg:mx-10  md:my-20">
       <div className="bg-[#5F1D91] mt-80 pt-10 lg:pt-60 pb-20 px-3 lg:px-40 rounded-2xl text-white">
         <p className="text-lg font-semibold relative before:content-[''] before:absolute before:w-[100px] before:h-[2px] before:bg-bg-accent before:-left-0 before:top-1/2 before:-translate-y-1/2 pl-28">
           Workflow

@@ -4,7 +4,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { MdAppRegistration } from "react-icons/md";
 import { RiCheckboxCircleFill } from "react-icons/ri";
 import { useLocation } from "react-router";
-// import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const Eligibility = [
   {
@@ -26,11 +26,32 @@ const Eligibility = [
 ];
 
 const Internships = () => {
-  const location = useLocation();
-  const path = location.pathname.split("/").filter(Boolean);
 
   return (
     <>
+      <Helmet>
+        <title>
+          Aspire Internship Program 2024 | 4th Cohort Applications Open
+        </title>
+        <meta
+          name="description"
+          content="Join Aspire's 3-month internship program at ITBI CUET, Chittagong. Gain real-world experience, expert mentorship, and career opportunities in tech. Apply by March 28th."
+        />
+        <meta
+          name="keywords"
+          content="tech internship, Aspire internship program, ITBI CUET internship, IT training, digital sector internship"
+        />
+        <link rel="canonical" href="/program/internships" />
+        <meta
+          property="og:title"
+          content="Aspire Internship Program 2024 - 4th Cohort"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="Transform your career with our industry-driven internship program. Expert-led workshops, real projects, and potential job opportunities await."
+        />
+      </Helmet>
       <section className="bg-primary-color mt-24 py-8">
         {/* Header Section */}
         <div
@@ -124,9 +145,9 @@ const Internships = () => {
               development.
             </p>
             <p className="text-gray-700">
-              As an intern, you’ll learn from industry professionals, gain
+              As an intern, you'll learn from industry professionals, gain
               insights into global tech trends, and build a strong foundation
-              for your career. Whether you’re interested in software
+              for your career. Whether you're interested in software
               development, digital marketing, or product management, this
               program has something for everyone.
             </p>
@@ -224,7 +245,8 @@ const Internships = () => {
           {/* Apply Button */}
           <div className="text-center">
             <a
-              href="/apply"
+              href="https://forms.gle/M6TBejhysGPTFpnr9"
+              target="_blank"
               className="inline-block bg-[#5F1D91] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#4A1673] transition-colors"
             >
               Apply Now
