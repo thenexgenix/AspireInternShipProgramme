@@ -1,34 +1,32 @@
 import React from "react";
 import { motion } from "motion/react";
 import { FaLinkedin } from "react-icons/fa";
+import sanchari from "../../assets/images/picture/Sanchari Karmakar.png";
 
 const testimonial = [
   {
     id: 1,
-    name: "Sarah Chen",
-    role: "Product Manager at NexGenix",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=150&q=80",
+    name: "Urmi Karmakar",
+    role: "AI Researcher at NexGenix",
+    image: "https://i.postimg.cc/FRNcWWHH/IMG-20250328-WA0005.jpg",
     quote:
-      "The Aspire internship was a game-changer for my career. I learned more in 3 months than I did in a year of traditional education.",
+      "The Aspire Internship transformed my career by giving me hands-on AI research experience that outshone traditional learning.",
   },
   {
     id: 2,
-    name: "Michael Rodriguez",
-    role: "Designer at NexGenix",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=150&q=80",
+    name: "Mohammad Tahseen",
+    role: "UI/UX Designer at NexGenix",
+    image: "https://i.postimg.cc/tghWzQyc/IMG-2165.jpg",
     quote:
-      "The mentorship I received was invaluable. My mentor helped me navigate the tech industry and land my dream job.",
+      "Aspire’s mentorship empowered me to master UI/UX design and confidently secure my dream role in the tech world.",
   },
   {
     id: 3,
-    name: "Emily Thompson",
-    role: "UX Designer at NexGenix",
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=150&q=80",
+    name: "Sanchari Karmakar",
+    role: "Administrative & Data Management at NexGenix",
+    image: sanchari,
     quote:
-      "Aspire provided me with real-world experience that made me stand out in job interviews. Best decision ever!",
+      "The practical skills I gained through Aspire in data management gave me a competitive edge in the job market—absolutely worth it!",
   },
 ];
 
@@ -80,7 +78,7 @@ const Testimonials = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 "
             >
               {testimonial?.map((testimonial) => (
                 <motion.div
@@ -88,7 +86,7 @@ const Testimonials = () => {
                   variants={itemVariants}
                   className="bg-white rounded-lg px-6  py-10  shadow-xl transform hover:scale-105 transition-transform duration-300"
                 >
-                  <div className="flex items-center mb-10">
+                  <div className="flex lg:flex-col xl:flex-row items-center gap-1 mb-10 lg:mb-4 xl:mb-6">
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
@@ -102,13 +100,6 @@ const Testimonials = () => {
                         {testimonial.role}
                       </p>
                     </div>
-                    <a
-                      href="#"
-                      className="ml-auto text-blue-600 hover:text-blue-800"
-                      aria-label={`LinkedIn profile of ${testimonial.name}`}
-                    >
-                      <FaLinkedin size={24} />
-                    </a>
                   </div>
                   <p className="text-gray-700">{testimonial.quote}</p>
                 </motion.div>
