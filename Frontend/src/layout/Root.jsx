@@ -7,7 +7,7 @@ import SmoothScroll from "../utils/SmoothScroll";
 
 const Root = () => {
   return (
-    <main className="font-Poopins">
+    <main className="font-Poopins overflow-hidden">
       {/* <SmoothScroll> */}
         <ScrollTop />
         {/* navbar */}

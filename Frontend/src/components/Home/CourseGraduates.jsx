@@ -1,18 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
-import image from "../../Assets/Stories/person.png";
 
 const profiles = [
   {
-    name: "Nadia Sultana",
-    role: "Best Designer - 15 projects",
-    image: image,
+    name: "Urmi Karmakar",
+    role: "AI Researcher",
+    image: "https://i.postimg.cc/7ZypVNNm/Urmi-Karmakar-nexgenix.png",
     bgColor: "bg-purple-700",
   },
   {
-    name: "Susmoy",
-    role: "Content Writer",
-    image: image,
+    name: "Urmi Karmakar",
+    role: "AI Researcher",
+    image: "https://i.postimg.cc/7ZypVNNm/Urmi-Karmakar-nexgenix.png",
+    bgColor: "bg-purple-700",
+  },
+  {
+    name: "Urmi Karmakar",
+    role: "AI Researcher",
+    image: "https://i.postimg.cc/7ZypVNNm/Urmi-Karmakar-nexgenix.png",
+    bgColor: "bg-purple-700",
+  },
+  {
+    name: "mohammad Tahseen",
+    role: "UI/UX Designer ",
+    image: "https://i.postimg.cc/tghWzQyc/IMG-2165.jpg",
     bgColor: "bg-pink-300",
   },
 ];
@@ -28,33 +39,37 @@ const CourseGraduates = () => {
         viewport={{ once: true }}
         className="mb-8 md:pr-20 text-lg md:text-xl w-full  mx-auto text-end "
       >
-        Meet Our Top Interns & Successful <br /> Course Graduates
+        Meet Our Top Interns & <br /> Rising Talent
       </motion.p>
 
       {/* card */}
-      <div className="relative flex flex-col items-center md:flex-row md:justify-around w-full max-w-7xl">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:flex-row gap-20 items-center w-full px-4 sm:px-8 md:px-12 max-w-7xl mx-auto ">
         {profiles.map((profile, index) => (
           <motion.div
             key={index}
-            className="relative flex flex-col items-center text-center md:text-left md:items-start mb-8 md:mb-0"
+            className="relative flex flex-col  items-center text-center mb-8 w-full max-w-sm mx-auto md:max-w-none"
             initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1.2 }}
+            whileInView={{
+              opacity: 1,
+              y: index % 2 == 1 ? 20 : 50,
+              scale: 1.1,
+            }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
             viewport={{ once: true }}
           >
             <div
-              className={`relative ${profile.bgColor} rounded-lg overflow-hidden flex items-center justify-center`}
+              className={`relative  overflow-hidden flex   justify-center items-center w-full`}
             >
-              {/*  Image */}
+              {/* Image */}
               <img
                 src={profile.image}
                 alt={profile.name}
-                className="w-full h-full object-cover "
+                className="w-fit   overflow-hidden  rounded-lg  h-80  object-cover  aspect-square"
               />
             </div>
 
-            {/*  Name cards  */}
-            <div className="mt-4 text-[70%]  -translate-y-16 translate-x-20 font-bold tracking-wide text-black bg-white px-4 py-2 rounded-md shadow-md">
+            {/* Name cards */}
+            <div className="mt-4 w-full px-4 text-sm sm:text-base font-bold tracking-wide text-black bg-white mx-auto max-w-xs rounded-md shadow-md">
               <motion.h3
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
@@ -63,7 +78,7 @@ const CourseGraduates = () => {
               >
                 {profile.name}
               </motion.h3>
-              <span className="text-[90%]  text-green-600 mt-2">
+              <span className="text-xs sm:text-sm text-green-600 mt-2 block">
                 {profile.role}
               </span>
             </div>
