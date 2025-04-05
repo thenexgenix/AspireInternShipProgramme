@@ -12,7 +12,7 @@ const SuccessStoriesSection = ({ rounded }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="bg-bg-accent   rounded-2xl p-6 md:max-w-md lg:max-w-xl h-fit"
+            className="bg-bg-accent relative  rounded-2xl p-6 md:max-w-md lg:max-w-xl h-fit"
           >
             <div className="flex items-center gap-10 md:gap-10 lg:gap-30">
               <div>
