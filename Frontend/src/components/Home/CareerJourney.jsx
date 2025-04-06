@@ -12,10 +12,10 @@ const iconMap = {
 
 const CareerJourney = memo(({ CareerJourneydata }) => {
   return (
-    <section className="max-w-7xl mx-auto p-8 mt-5 md:mt-12 lg:mt-32">
+    <section className="lg:max-w-7xl xl:max-w-full xl:px-[11%] mx-auto p-8 mt-5 md:mt-12 lg:mt-32">
       {/* Hero Section */}
       <motion.div
-        className="text-start mb-20 flex flex-col md:flex-row gap-10  justify-between items-center "
+        className="text-start mb-20 flex flex-col md:flex-row gap-10  justify-between items-center"
         initial={{ opacity: 0, x: 30 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -45,7 +45,7 @@ const CareerJourney = memo(({ CareerJourneydata }) => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
                 {Icon && (
-                  <Icon className="text-4xl rounded-xl md:text-5xl text-text-secondary bg-gray-300 md:p-2" />
+                  <Icon className={`text-4xl rounded-xl md:text-5xl ${index === 2 && "text-yellow-500" }  ${index === 3 && "text-blue-500" } bg-gray-300 md:p-2`} />
                 )}
 
                 <div>
@@ -70,7 +70,7 @@ const CareerJourney = memo(({ CareerJourneydata }) => {
             alt="Career Journey Aspire internship program"
             className="rounded-lg shadow-lg aspect-square object-cover md:h-[400px] lg:h-[500px] relative z-40"
           />
-          <div className=" blur-[2px] absolute inset-0 w-[300px] md:w-[400px] lg:w-[500px] h-full translate-x-12 translate-y-5 rounded-lg border-4 border-[#ebc3cc]  before:absolute before:inset-0 before:w-full before:h-full before:rounded-lg before:bg-gradient-to-r before:from-[#5F1D91] before:to-[#FFB4C5] before:opacity-20 before:-z-10"></div>
+          <div className=" blur-[2px] absolute  inset-0 w-[400px] md:w-[400px] lg:w-[500px] h-full translate-x-12 translate-y-5 rounded-lg border-4 border-[#ebc3cc]  before:absolute before:inset-0 before:w-full before:h-full before:rounded-lg before:bg-gradient-to-r before:from-[#5F1D91] before:to-[#FFB4C5] before:opacity-20 before:-z-10"></div>
         </motion.div>
       </div>
     </section>
