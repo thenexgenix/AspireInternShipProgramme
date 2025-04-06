@@ -30,8 +30,8 @@ const AboutUs = () => {
           />
         </div>
         <Workflow />
-        {/* <Member /> */}
-        {/* <Testimonial /> */}
+        <Member />
+        <Testimonial />
       </div>
     </>
   );

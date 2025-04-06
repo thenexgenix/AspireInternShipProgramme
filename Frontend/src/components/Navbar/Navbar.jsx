@@ -43,23 +43,23 @@ const Navbar = memo(({ isLoggedIn }) => {
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`fixed w-full top-0 z-50 transition-all duration-300 py-5 ${
+      className={` fixed w-full top-0 z-50 transition-all duration-300 pt-5 ${
         isScrolled ? "backdrop-blur-md bg-primary-color/80" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <motion.div initial={{ scale: 0.8 }} whileHover={{ scale: 0.9 }}>
+      <div className="max-w-7xl xl:max-w-full  mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="flex items-center justify-between xl:justify-around gap-0 xl:gap-80 h-16 ">
+          <motion.div initial={{ scale: 0.8 }} whileHover={{ scale: 0.7 }}>
             <Link to="/" onClick={closeMobileMenu}>
               <img
                 src={logo}
                 alt="Aspire Internship Programme (Thenexgenix)"
-                className="w-40 md:w-44"
+                className="w-40 md:w-44 p-5"
               />
             </Link>
           </motion.div>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4  md:text-[80%] lg:text-lg">
             {navItems.map((item) => (
               <div key={item.title} className="relative">
                 {item.submenu ? (
@@ -113,7 +113,7 @@ const Navbar = memo(({ isLoggedIn }) => {
             )}
 
             <Link to="/our-program/internship">
-              <button className="btn bg-bg-secondary text-primary-color rounded-md">
+              <button className="btn bg-bg-secondary text-primary-color rounded-md md:text-[80%] lg:text-sm ">
                 Apply Now
               </button>
             </Link>

@@ -59,7 +59,7 @@ const Workflow = () => {
             {workflowData.map((item, index) => (
               <motion.div
                 key={index}
-                className="w-full lg:w-72 p-10 rounded-md backdrop-blur-[20.01px] bg-gradient-to-b from-[rgba(255,180,197,0.07)] via-[rgba(153,153,153,0.07)] to-[rgba(153,153,153,0.07)] shadow-md text-center"
+                className="shadow-sm border border-[#888686] w-full lg:w-72 p-10 rounded-md backdrop-blur-[20.01px] bg-gradient-to-b from-[rgba(255,180,197,0.07)] via-[rgba(153,153,153,0.07)] to-[rgba(153,153,153,0.07)]  text-center"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
