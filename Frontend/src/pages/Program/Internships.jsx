@@ -26,7 +26,6 @@ const Eligibility = [
 ];
 
 const Internships = () => {
-
   return (
     <>
       <Helmet>
@@ -82,13 +81,21 @@ const Internships = () => {
               <span>ITBI CUET, Chittagong.</span>
             </p>
           </div>
-          <div className="grid grid-cols-3  gap-10 md:gap-14 lg:gap-20 mb-12">
+          <div className="grid grid-cols-2    md:grid-cols-3  gap-10 md:gap-14 lg:gap-20 mb-12">
             <div className="flex flex-col  justify-center items-start gap-2.5">
               <p className="text-gray-700 flex  items-center gap-1.5 ">
                 <FaHourglassStart />
                 <span>Start Date</span>
               </p>
-              <p className="font-semibold">Immediately</p>
+              <p className="font-semibold">7 April 2025</p>
+            </div>
+
+            <div className="flex flex-col  justify-center items-start gap-2.5">
+              <p className="text-gray-700 flex   items-center gap-1.5 ">
+                <MdAppRegistration />
+                <span>Deadline</span>
+              </p>
+              <p className="font-semibold">30 April 2025</p>
             </div>
             <div className="flex flex-col  justify-center items-start gap-2.5">
               <p className="text-gray-700 flex  items-center gap-1.5 ">
@@ -99,16 +106,9 @@ const Internships = () => {
               </p>
               <p className="font-semibold">3 Months</p>
             </div>
-            <div className="flex flex-col  justify-center items-start gap-2.5">
-              <p className="text-gray-700 flex   items-center gap-1.5 ">
-                <MdAppRegistration />
-                <span>Apply By</span>
-              </p>
-              <p className="font-semibold">28 Mar</p>
-            </div>
           </div>
 
-          {/* Frame Section */}
+          {/* Frame Section
           <div className="flex items-center justify-between mb-12 p-4 bg-gray-100 rounded-lg">
             <div className="flex items-center">
               <svg
@@ -128,7 +128,7 @@ const Internships = () => {
               <p className="font-semibold">Frame 3749</p>
             </div>
             <span className="text-gray-600 text-sm">56 applicants</span>
-          </div>
+          </div> */}
 
           {/* About Section */}
           <div className="mb-12">
@@ -232,12 +232,12 @@ const Internships = () => {
 
           {/* Actively On Section */}
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-6">
+            {/* <h2 className="text-2xl font-semibold mb-6">
               Actively On Aspire Internship Program
-            </h2>
+            </h2> */}
             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
               <p className="text-gray-700">
-                Hiring since February 2025 | 10 candidates hired
+              Ready to grow? Apply to the Aspire Internship Program
               </p>
             </div>
           </div>

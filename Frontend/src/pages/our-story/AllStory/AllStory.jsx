@@ -1,21 +1,20 @@
-import { motion } from "framer-motion"; // Importing necessary hooks
-import person from "../../../Assets/Stories/person.png";
+import { motion } from "motion/react"; 
 import personBg from "../../../Assets/Stories/person-bg.png";
 
 function AllStory() {
     const stories = [
         {
-            image: person,
+            image: "https://i.postimg.cc/rmVGT9By/Placeholder-Profile-Image.jpg",
             title: "Susmoy's Journey: From Aspiring Intern to Industry Leader",
             paragraph: "Discover how Susmoy turned their passion into a successful career with the help of Aspire's real-world experience."
         },
         {
-            image: person,
+            image: "https://i.postimg.cc/rmVGT9By/Placeholder-Profile-Image.jpg",
             title: "Susmoy's Journey: From Aspiring Intern to Industry Leader",
             paragraph: "Discover how Susmoy turned their passion into a successful career with the help of Aspire's real-world experience."
         },
         {
-            image: person,
+            image: "https://i.postimg.cc/rmVGT9By/Placeholder-Profile-Image.jpg",
             title: "Susmoy's Journey: From Aspiring Intern to Industry Leader",
             paragraph: "Discover how Susmoy turned their passion into a successful career with the help of Aspire's real-world experience."
         }
@@ -44,7 +43,7 @@ function AllStory() {
                 <img
                   src={story.image}
                   alt="person"
-                  className="absolute bottom-0 "
+                  className="absolute bottom-0 object-contain aspect-square"
                 />
               </div>
             </div>

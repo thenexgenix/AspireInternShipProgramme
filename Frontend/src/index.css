@@ -21,4 +21,10 @@
 
 html {
   background-color: #EFF2FA;
+
+}
+
+::selection {
+  background-color: #330B51;
+  color: #EFF2FA;
 }

@@ -1,6 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion"; // Importing necessary hooks
-
-import banners from "../../../Assets/AboutUspage/banner.png";
+import { motion, useScroll, useTransform } from "motion/react";
 
 const Banner = () => {
   // const { scrollYProgress } = useScroll();
@@ -36,15 +34,14 @@ const Banner = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
           >
-            5,000+ <br /> Learners
+            500+ <br /> Interns
           </motion.h2>
           {/* Image & Description */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left mt-8 lg:mt-0">
+          <div className="flex flex-col items-center  lg:items-center text-center lg:text-left mt-8 lg:mt-0">
             <img
-              src={banners}
+              src="https://i.postimg.cc/JhVrBb6P/Navy-And-Yellow-Modern-Congratulation-Best-Employee-Of-The-Month-Instagram-Post.png"
               alt="Aspire Internship Program"
-              className="w-full max-w-lg lg:max-w-none"
-              loading="lazy"
+              className=" h-[40vh] md:h-[50vh] rounded-2xl  object-contain "
             />
             <motion.p
               initial={{ x: 50, opacity: 0 }}

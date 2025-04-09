@@ -65,30 +65,36 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="container mx-auto px-4 md:pt-20 "
       >
-        <div className="flex flex-col md:flex-row items-center gap-28 md:gap-20   ">
+        <div className="flex flex-col lg:flex-row items-center gap-28 md:gap-20">
           {/* Left Section */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+           
             className="flex-1 space-y-8 "
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Bridge The Gap For
               <div className="flex flex-wrap gap-4 mt-2">
                 <span className="text-text-secondary">Learning</span>
                 <span>&</span>
                 <span className="text-text-accent">Industry</span>
               </div>
-            </h2>
+            </motion.h2>
 
-            <p className="text-gray-600 text-lg">
+            <motion.p 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-gray-600 text-lg">
               The Aspire Internship Program is a professional development
               initiative designed to provide students and young professionals
               with hands-on experience in their chosen fields. This program
               typically focuses on skill-building, mentorship, and real-world
               exposure to industry practices
-            </p>
+            </motion.p>
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-6">
@@ -140,9 +146,9 @@ const Hero = () => {
                   className=" relative rounded-2xl overflow-hidden shadow-2xl z-1 "
                 >
                   <img
-                    src="https://i.postimg.cc/JhVrBb6P/Navy-And-Yellow-Modern-Congratulation-Best-Employee-Of-The-Month-Instagram-Post.png"
+                    src="https://i.postimg.cc/7YSBZhkQ/Itbi-image-nexgenix.jpg"
                     alt="Aspire Internship Program"
-                    className="w-full"
+                    className="w-full h-full lg:h-[40vh] xl:h-[50vh] object-cover"
                   />
                 </motion.div>
 
@@ -151,14 +157,14 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="absolute -top-25 left-2 h-fit md:top-2/4 md:-left-20 bg-bg-secondary text-white px-6 py-3 rounded-lg shadow-lg z-10"
+                  className="absolute -top-25 left-2 h-fit md:top-2/4 md:-left-10 lg:-left-20 bg-bg-secondary text-white px-6 py-2 rounded-lg shadow-lg z-10"
                 >
                   <div className="font-semibold flex flex-col gap-3">
-                    <p>500+ Intern Recruit</p>
+                    <p className="font-normal">500+ Intern Recruit</p>
                     <div className="avatar-group -space-x-6">
                       {tooltip?.map((item, index) => (
                         <div className="avatar" key={item.id}>
-                          <div className="w-12 z-0">
+                          <div className="w-12 z-0 hover:z-10 transition-all duration-150 ease-linear">
                             <img
                               src={item.image}
                               alt={`Student ${

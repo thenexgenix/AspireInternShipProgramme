@@ -9,21 +9,9 @@ const profiles = [
     bgColor: "bg-purple-700",
   },
   {
-    name: "Urmi Karmakar",
-    role: "AI Researcher",
-    image: "https://i.postimg.cc/7ZypVNNm/Urmi-Karmakar-nexgenix.png",
-    bgColor: "bg-purple-700",
-  },
-  {
-    name: "Urmi Karmakar",
-    role: "AI Researcher",
-    image: "https://i.postimg.cc/7ZypVNNm/Urmi-Karmakar-nexgenix.png",
-    bgColor: "bg-purple-700",
-  },
-  {
     name: "mohammad Tahseen",
     role: "UI/UX Designer ",
-    image: "https://i.postimg.cc/tghWzQyc/IMG-2165.jpg",
+    image: "https://i.postimg.cc/BbPyQgrF/Mohammad-Tahseen-nexgenic.jpg",
     bgColor: "bg-pink-300",
   },
 ];
@@ -43,7 +31,7 @@ const CourseGraduates = () => {
       </motion.p>
 
       {/* card */}
-      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:flex-row gap-20 items-center w-full px-4 sm:px-8 md:px-12 max-w-7xl mx-auto ">
+      <div className="relative flex flex-col md:flex-row gap-20 items-center w-full px-4 sm:px-8 md:px-12 max-w-7xl mx-auto ">
         {profiles.map((profile, index) => (
           <motion.div
             key={index}

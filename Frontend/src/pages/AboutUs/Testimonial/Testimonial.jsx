@@ -2,50 +2,75 @@ import React, { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import { motion } from "motion/react";
 import quote from "../../../Assets/AboutUspage/quote.png";
-import t1 from "../../../Assets/AboutUspage/t1.png";
-import t2 from "../../../Assets/AboutUspage/t2.png";
-import t3 from "../../../Assets/AboutUspage/t3.png";
-import t4 from "../../../Assets/AboutUspage/t4.png";
+import sanchari from "../../../Assets/images/picture/Sanchari Karmakar.png";
+import Sohel from "../../../Assets/images/picture/Mohammad Sohel.png";
+import PinkeyDey from "../../../Assets/images/picture/Pinki Dey.png";
+import Afsana from "../../../Assets/images/picture/Afsana Tasnim Labonno.png";
+import Riaz from "../../../Assets/images/picture/Riaz Uddin Ahmed.png";
 
 const testimonials = [
   {
     rating: 5,
-    text: "A Game-Changer for My Career!",
+    text: "A Career-Defining AI Experience",
     content:
-      "The Aspire Internship Program was a game-changer for me! I gained hands-on experience, worked on real projects, and built connections that helped me land my first job.",
-    author: "Michel Ruel",
-    image: t1,
+      "The Aspire Internship transformed my career by giving me hands-on AI research experience that outshone traditional learning.",
+    author: "Urmi Karmakar",
+    image: "https://i.postimg.cc/FRNcWWHH/IMG-20250328-WA0005.jpg",
   },
   {
     rating: 5,
-    text: "Free Courses That Truly Add Value!",
+    text: "Designed My Future with Aspire",
     content:
-      "I never thought free courses could be this valuable! The learning materials and structured mentorship helped me improve my skills in a practical way.",
-    author: "Sara Ahmad",
-    image: t2,
+      "Aspire’s mentorship empowered me to master UI/UX design and confidently secure my dream role in the tech world.",
+    author: "Mohammad Tahseen",
+    image: "https://i.postimg.cc/tghWzQyc/IMG-2165.jpg",
   },
   {
     rating: 5,
-    text: "Real-World Projects That Boost Confidence",
+    text: "Gained Practical Skills That Matter",
     content:
-      "Really gives me the confidence to take on industry-level projects. The support and guidance provided here were incredible!",
-    author: "Arif Khan",
-    image: t3,
+      "The practical skills I gained through Aspire in data management gave me a competitive edge in the job market—absolutely worth it!",
+    author: "Sanchari Karmakar",
+    image: sanchari,
   },
   {
     rating: 5,
-    text: "The Best Platform for Learning",
+    text: "Transformed My Career Through the Internship",
     content:
-      "The perfect platform for learning and growth! The internship showed me how to apply my skills in real-world scenarios, preparing me for my future career.",
-    author: "Jamatul Fardous",
-    image: t4,
+      "The Aspire Internship Program transformed my career. I gained practical skills, worked with real teams, and finally understood how the industry works.",
+    author: "Mohammed Sohel",
+    image: Sohel,
+  },
+  {
+    rating: 5,
+    text: "Incredible Internship Experience",
+    content:
+      "The internship provided a well-structured learning path and real projects that helped me build my portfolio. I now feel confident entering the tech world.",
+    author: "Pinkey Dey",
+    image: PinkeyDey,
+  },
+  {
+    rating: 5,
+    text: "Gained Confidence with Real Projects",
+    content:
+      "Working on real-world tasks during the internship boosted my confidence. The mentors were supportive, and the experience was beyond my expectations.",
+    author: "Afsana Tasnim Labonno",
+    image: Afsana,
+  },
+  {
+    rating: 4,
+    text: "Best Internship for Skill Growth",
+    content:
+      "This internship helped me grow both technically and professionally. It bridged the gap between theory and real-world application perfectly.",
+    author: "Riaz Uddin Ahmed Azad",
+    image: Riaz,
   },
 ];
 
 const Testimonial = () => {
   // const [activeSlide, setActiveSlide] = useState(0);
   const [slidesPerPage, setSlidesPerPage] = useState(2);
-  const [carddrag, setcarddrag] = useState(400);
+  const [carddrag, setcarddrag] = useState(100);
 
   useEffect(() => {
     const updateSlidesPerPage = () => {
@@ -81,7 +106,7 @@ const Testimonial = () => {
             id="testimonials-title"
             className="text-3xl md:text-4xl font-bold"
           >
-            What Our Learners & Interns Say About Us
+            What Our Interns Say About Us
           </h2>
           <div>
             <p className=" text-lg font-semibold relative before:content-[''] before:absolute before:w-[100px] before:h-[2px] before:bg-bg-secondary before:-left-0 before:top-1/2 before:-translate-y-1/2 pl-28">

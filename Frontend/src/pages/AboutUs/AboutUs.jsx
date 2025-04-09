@@ -13,8 +13,14 @@ const AboutUs = () => {
     <>
       <Helmet>
         <title>About Aspire Internship Program</title>
-        <meta name="description" content="Discover Aspire's mission to transform tech education. Learn about our expert team, innovative teaching methods, and commitment to student success at ITBI CUET, Chittagong." />
-        <meta name="keywords" content="Aspire education, tech training, ITBI CUET, Chittagong tech education, professional development" />
+        <meta
+          name="description"
+          content="Discover Aspire's mission to transform tech education. Learn about our expert team, innovative teaching methods, and commitment to student success at ITBI CUET, Chittagong."
+        />
+        <meta
+          name="keywords"
+          content="Aspire education, tech training, ITBI CUET, Chittagong tech education, professional development"
+        />
         <link rel="canonical" href="/about-us" />
       </Helmet>
       <div className="bg-primary-color mt-24 mx-auto overflow-hidden ">

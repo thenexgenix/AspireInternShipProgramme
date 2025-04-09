@@ -1,15 +1,29 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import m1 from "../../../Assets/AboutUspage/m1.png";
-import m2 from "../../../Assets/AboutUspage/m2.png";
-import m3 from "../../../Assets/AboutUspage/m3.png";
-import m4 from "../../../Assets/AboutUspage/m4.png";
+import { motion, AnimatePresence } from "motion/react";
+import { FaArrowRight } from "react-icons/fa";
 
 const teamMembers = [
-  { name: "Christopher Joes", role: "Leadership Team", image: m1 },
-  { name: "Joe Rogan", role: "UI & UX Designer", image: m2 },
-  { name: "Michael Jay", role: "Developer", image: m3 },
-  { name: "Todo Roe", role: "CEO", image: m4 },
+  {
+    name: "Sanchari Karmakar",
+    role: "Administrative & Data Management",
+    image: "https://i.postimg.cc/3R6qDjRj/Shakti-Karmakar-nex-Genix.png",
+  },
+  {
+    name: "Mohammad Tahseen",
+    role: "UI & UX Designer",
+    image: "https://i.postimg.cc/BbPyQgrF/Mohammad-Tahseen-nexgenic.jpg",
+  },
+  {
+    name: "Jamshadul Islam Minhaj",
+    role: "Graphics Design",
+    image:
+      "https://i.postimg.cc/RCk8ST24/Mohammad-Jamshadul-Islam-Minhaj-nexgenix.png",
+  },
+  {
+    name: "Asaduzzaman Asad",
+    role: "Full Stack Developer",
+    image: "https://i.postimg.cc/MHjQPMBx/Asaduzzaman-nexgenix.png",
+  },
 ];
 
 const Member = () => {
@@ -17,7 +31,7 @@ const Member = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkScreenSize = () => setIsMobile(window.innerWidth < 640);
+    const checkScreenSize = () => setIsMobile(window.innerWidth < 760);
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
@@ -39,7 +53,7 @@ const Member = () => {
           Our story
         </p>
         <h2 className="text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
-          The Amazing Team Behind Our Success
+        Meet Our Top Interns & Learners Rising Talent
         </h2>
       </motion.div>
 
@@ -69,9 +83,9 @@ const Member = () => {
           </AnimatePresence>
           <button
             onClick={handleNext}
-            className="mt-6 px-6 py-2 bg-gradient-to-r from-purple-800 to-indigo-900 text-white text-lg font-semibold rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            className="mt-6  px-4 py-4 bg-gradient-to-r from-purple-800 to-indigo-900 text-white text-lg font-semibold   rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
           >
-            Meet Next Member
+            <FaArrowRight />
           </button>
         </div>
       ) : (

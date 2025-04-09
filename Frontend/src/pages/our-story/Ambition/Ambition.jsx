@@ -1,7 +1,6 @@
-import { motion } from "framer-motion"; // Importing necessary hooks
+import { motion } from "motion/react"; 
 import backgroundFrame from "../../../Assets/Stories/person-bg.png";
-import personImage from "../../../Assets/Stories/person.png";
-import ambitionBG from "../../../Assets/Stories/ambition-bg.png"
+import ambitionBG from "../../../Assets/Stories/ambition-bg.png";
 import { GoArrowUpRight } from "react-icons/go";
 
 function Ambition() {
@@ -18,15 +17,18 @@ function Ambition() {
       </motion.h1>
       <div className="flex flex-col lg:flex-row gap-6 justify-between my-8">
         {/* left side card */}
-        <div className="w-full md:w-[650px] h-full md:h-[435px] rounded-3xl relative"
-        style={{
+        <div
+          className="w-full md:w-[650px] h-full md:h-[435px] rounded-3xl relative"
+          style={{
             backgroundImage: `url(${ambitionBG})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
         >
-            <p className="text-xl w-full md:w-3/4 text-white p-8 md:p-10 lg:p-14">
-                Discover how People turned their passion into a successful career with the help of Aspire's real-world experience.</p>
+          <p className="text-xl w-full md:w-3/4 text-white p-8 md:p-10 lg:p-14">
+            Discover how People turned their passion into a successful career
+            with the help of Aspire's real-world experience.
+          </p>
           {/* <img src={ambitionImage} alt="ambition-image" /> */}
         </div>
         {/* right side card */}
@@ -48,7 +50,7 @@ function Ambition() {
                 }}
               >
                 <img
-                  src={personImage}
+                  src={"https://i.postimg.cc/rmVGT9By/Placeholder-Profile-Image.jpg"}
                   alt="Movie"
                   className="absolute bottom-0 "
                 />

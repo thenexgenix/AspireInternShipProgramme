@@ -1,4 +1,4 @@
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import video from "../../../Assets/Stories/video.mp4";
 
